@@ -1,7 +1,7 @@
-import App from "../App";
-
 export default function Usuario(){
+    return(
     <>
-    <App />
+    <h1>Usuário</h1>
     </>
+    )
 } 

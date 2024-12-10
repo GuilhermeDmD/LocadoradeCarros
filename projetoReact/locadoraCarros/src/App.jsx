@@ -1,43 +1,29 @@
-import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Alugados from './components/Alugados.jsx';
+import Menu from './components/Menu.jsx';
+import Carros from './components/Carros.jsx';
+import Usuario from './components/Usuario.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
-  const [page, setPage] = useState('home');  // Estado para controle da página atual
-
-  // Função para mudar a página
-  const changePage = (pageName) => {
-    setPage(pageName);
-  };
-
   return (
     <>
-    <div>
-      <div className="cabecalho">
-        <h1>Localize🚗</h1>
-        <nav>
-          <button onClick={() => changePage('home')}>Home</button>
-          <button onClick={() => changePage('carros')}>Carros</button>
-          <button onClick={() => changePage('alugados')}>Alugados</button>
-          <button onClick={() => changePage('usuarios')}>Usuários</button>
-        </nav>
-      </div>
-
-      {/* Isso aqui é uma gambiarra para simular o menu
-      Para que o menu funcione teremos que utilizar react Routes
-      para isso cada um deve instalá-lo no projeto utilizando o seguinte comando no console
-      npm install react-router-dom*/}
-      <div className="content">
-        {page === 'home' && <h2>Bem-vindo à página inicial!</h2>}
-        {page === 'carros' && <h2>Lista de Carros</h2>}
-        {page === 'alugados' && <h2>Lista de Aluguéis</h2>}
-        {page === 'usuarios' && <h2>Lista de Usuários</h2>}
-      </div>
-      <footer>
-        <h3>Localize🚗</h3>
-        <p>Todos os direitos reservados 2024</p>
-      </footer>
-    </div>
-
+    <Header />
+    <Router>
+        <Menu />
+        <div className="page-content">
+          <Routes>
+            <Route path="/" element={<h2>Bem-vindo à Localize!</h2>} />
+            <Route path="/Carros" element={<Carros />} />
+            <Route path="/Alugados" element={<Alugados />} />
+            <Route path="/Usuario" element={<Usuario />} />
+          </Routes>
+        </div>
+    </Router>
+    <Footer />
     </>
   );
 }

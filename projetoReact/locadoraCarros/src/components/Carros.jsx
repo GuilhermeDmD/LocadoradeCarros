@@ -1,7 +1,8 @@
-import App from "../App";
-
 export default function Carros(){
-    <>
-    <App />
-    </>
+   
+    return(
+        <>
+        <h1>Carros</h1>
+        </>
+    )
 }

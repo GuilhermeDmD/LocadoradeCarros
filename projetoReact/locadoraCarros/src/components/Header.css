@@ -1,0 +1,10 @@
+.cabecalho {
+    background-color: #00bcd4;  /* Cor de fundo azul claro */
+    color: white;                /* Cor do testo */
+    text-align: center;          /* Centraliza o texto horizontalmente */
+    padding: 20px 0;             /* Apenas padding no topo e no fundo */
+    position: fixed;             /* Fixa o cabeçalho no topo */
+    top: 0;                      /* Coloca o cabeçalho no topo da página */
+    left: 0;                     /* Garante que comece no início da página */
+    width: 100%;                 /* Ocupa toda a largura da tela */
+  }

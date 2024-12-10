@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh; /* Ajuste a altura conforme necessário */
+    /* Adicione outras propriedades de estilo aqui */
+  }
+  
+  .menu-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  
+  .lista-centralizada {
+    list-style: none;
+    display: flex;
+  }
+  
+  .lista-centralizada li {
+    margin: 0 10px;
+  }
+nav ul li a {
+    color: #333; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 20px; /* Tamanho do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 1px solid #333; /* Borda ao redor */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Efeito ao passar o mouse */
+  nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
